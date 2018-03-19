@@ -2,7 +2,7 @@
 
 tempfoo="sqlimport"
 # Let's try mktemp for output, if creation fails -> Exit with Errorcode 1
-TMPFILE=`mktemp /tmp/${tempfoo}.XXXXXX` || echo "ERROR: while creation of temp file!"; exit 1
+TMPFILE=`mktemp /tmp/${tempfoo}.XXXXXX` || echo "ERROR: while creation of temp file!" && exit 1
 
 # delete all lines in existing table, they are probably old
 echo "TRUNCATE TABLE tlspolicies;" > $TMPFILE
