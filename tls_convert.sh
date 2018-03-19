@@ -6,4 +6,4 @@ while read p; do
 		NEW="insert into tlspolicies (domain, policy, params) values ('${stringarray[0]}', '${stringarray[1]}', '${stringarray[2]}');"
 		echo $NEW
 	fi
-done </root/postfix-tls-policy/tls_policy-dane
+done <./tls_policy-dane
